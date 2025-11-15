@@ -9,6 +9,10 @@ interface Props {
 const { title, description = "Discover the voices shaping DevOps, Cloud, and Cloud-Native - all in one place" } = Astro.props;
 const siteTitle = "Awesome CloudNatives";
 const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+
+// Get base URL from Astro config
+import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -17,7 +21,7 @@ const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Open Graph / Social -->
@@ -33,13 +37,13 @@ const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
   <body>
     <header>
       <nav class="container">
-        <a href="/" class="logo">
+        <a href={`${base}/`} class="logo">
           <span class="logo-icon">☁️</span>
           <span class="logo-text">Awesome CloudNatives</span>
         </a>
         <div class="nav-links">
-          <a href="/">Home</a>
-          <a href="/about/">About</a>
+          <a href={`${base}/`}>Home</a>
+          <a href={`${base}/about/`}>About</a>
           <a href="https://github.com/nimeshmora/awesome-cloudnatives" target="_blank" rel="noopener">GitHub</a>
         </div>
       </nav>
