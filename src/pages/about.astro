@@ -4,95 +4,290 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="About" description="Learn about Awesome CloudNatives and how to contribute">
   <div class="container">
-    <div style="max-width: 800px; margin: 0 auto;">
-      <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">About Awesome CloudNatives</h1>
-
-      <div style="background: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: 0.75rem; padding: 2rem; margin-bottom: 2rem;">
-        <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">Our Mission</h2>
-        <p style="color: var(--color-text-muted); line-height: 1.8; margin-bottom: 1rem;">
-          The DevOps, Cloud, and Cloud-Native ecosystem is vast and growing every day. With hundreds of amazing
-          content creators, thought leaders, and practitioners sharing their knowledge, it can be overwhelming
-          to discover who to follow and learn from.
-        </p>
-        <p style="color: var(--color-text-muted); line-height: 1.8;">
-          <strong>Awesome CloudNatives</strong> aims to solve this by creating a centralized, community-curated
-          directory of influential voices in the space. Whether you're looking for Kubernetes experts, AWS gurus,
-          DevOps practitioners, or Platform Engineering pioneers - you'll find them all here.
+    <div style="max-width: 900px; margin: 0 auto;">
+      <!-- Hero Section -->
+      <div style="text-align: center; margin-bottom: 4rem; padding: 3rem 0;">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem; background: linear-gradient(135deg, var(--color-primary), var(--color-accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+          About Awesome CloudNatives
+        </h1>
+        <p style="font-size: 1.25rem; color: var(--color-text-muted); max-width: 700px; margin: 0 auto;">
+          Your gateway to discovering the brightest minds in DevOps, Cloud, and Cloud-Native technologies.
         </p>
       </div>
 
-      <div style="background: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: 0.75rem; padding: 2rem; margin-bottom: 2rem;">
-        <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">What Makes Someone "Awesome"?</h2>
-        <p style="color: var(--color-text-muted); line-height: 1.8; margin-bottom: 1rem;">
-          We look for people who:
-        </p>
-        <ul style="color: var(--color-text-muted); line-height: 1.8; margin-left: 1.5rem;">
-          <li>Actively create content (blogs, videos, talks, courses, podcasts)</li>
-          <li>Share knowledge and help educate the community</li>
-          <li>Have a consistent public presence for at least 6 months</li>
-          <li>Focus on DevOps, Cloud, Cloud-Native, or related technologies</li>
-          <li>Demonstrate genuine expertise and community engagement</li>
-        </ul>
+      <!-- The Problem & Solution -->
+      <div class="feature-grid" style="margin-bottom: 3rem;">
+        <div class="feature-card">
+          <div class="feature-icon">🤔</div>
+          <h3>The Challenge</h3>
+          <p>The cloud-native ecosystem is vast and evolving rapidly. With thousands of content creators, it's overwhelming to find the right voices to follow and learn from.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💡</div>
+          <h3>Our Solution</h3>
+          <p>A curated, community-driven directory that brings together influential educators, practitioners, and thought leaders—all in one searchable place.</p>
+        </div>
       </div>
 
-      <div style="background: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: 0.75rem; padding: 2rem; margin-bottom: 2rem;">
-        <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">How to Contribute</h2>
-        <p style="color: var(--color-text-muted); line-height: 1.8; margin-bottom: 1rem;">
-          This is a <strong>community-driven project</strong>. We welcome contributions from everyone!
+      <!-- What Makes Someone Awesome -->
+      <div style="background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg-tertiary) 100%); border: 1px solid var(--color-border); border-radius: 1rem; padding: 3rem; margin-bottom: 3rem;">
+        <h2 style="font-size: 2rem; margin-bottom: 2rem; text-align: center;">✨ What Makes Someone "Awesome"?</h2>
+
+        <div class="criteria-grid">
+          <div class="criteria-item">
+            <span class="criteria-icon">📚</span>
+            <div>
+              <strong>Active Educators</strong>
+              <p>They create blogs, videos, courses, talks, or podcasts that help others learn</p>
+            </div>
+          </div>
+          <div class="criteria-item">
+            <span class="criteria-icon">🎯</span>
+            <div>
+              <strong>Proven Expertise</strong>
+              <p>They demonstrate deep knowledge in DevOps, Kubernetes, Cloud, or related technologies</p>
+            </div>
+          </div>
+          <div class="criteria-item">
+            <span class="criteria-icon">🌱</span>
+            <div>
+              <strong>Community First</strong>
+              <p>They share knowledge freely and help grow the cloud-native community</p>
+            </div>
+          </div>
+          <div class="criteria-item">
+            <span class="criteria-icon">⏰</span>
+            <div>
+              <strong>Consistent Presence</strong>
+              <p>They've been actively contributing for at least 6 months</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- How to Contribute -->
+      <div style="background: var(--color-bg-secondary); border: 1px solid var(--color-primary); border-radius: 1rem; padding: 3rem; margin-bottom: 3rem; text-align: center;">
+        <h2 style="font-size: 2rem; margin-bottom: 1rem;">🤝 Join the Community</h2>
+        <p style="color: var(--color-text-muted); font-size: 1.125rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+          This is a <strong style="color: var(--color-primary);">100% community-driven</strong> project. We welcome contributions from everyone!
         </p>
-        <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;">
-          <a href="https://github.com/nimeshmora/awesome-cloudnatives/blob/main/CONTRIBUTING.md" class="cta-link">
-            📖 Read Contributing Guidelines
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 2rem;">
+          <a href="https://github.com/nimeshmora/awesome-cloudnatives/blob/main/CONTRIBUTING.md" class="contribute-card">
+            <span style="font-size: 2rem; margin-bottom: 0.5rem;">📖</span>
+            <strong>Read the Guide</strong>
+            <p>Learn how to contribute</p>
           </a>
-          <a href="https://github.com/nimeshmora/awesome-cloudnatives/issues/new?template=add-influencer.yml" class="cta-link">
-            ➕ Suggest an Influencer
+          <a href="https://github.com/nimeshmora/awesome-cloudnatives/issues/new?template=add-influencer.yml" class="contribute-card">
+            <span style="font-size: 2rem; margin-bottom: 0.5rem;">➕</span>
+            <strong>Suggest Someone</strong>
+            <p>Nominate an influencer</p>
           </a>
-          <a href="https://github.com/nimeshmora/awesome-cloudnatives" class="cta-link">
-            ⭐ Star on GitHub
+          <a href="https://github.com/nimeshmora/awesome-cloudnatives" class="contribute-card">
+            <span style="font-size: 2rem; margin-bottom: 0.5rem;">⭐</span>
+            <strong>Star on GitHub</strong>
+            <p>Show your support</p>
           </a>
         </div>
       </div>
 
-      <div style="background: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: 0.75rem; padding: 2rem;">
-        <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">Self-Submissions Welcome</h2>
+      <!-- Self-Submissions Welcome -->
+      <div style="background: var(--color-bg-secondary); border-left: 4px solid var(--color-accent); border-radius: 0.5rem; padding: 2rem; margin-bottom: 3rem;">
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+          <span>🙋</span> Self-Submissions Are Welcome!
+        </h3>
         <p style="color: var(--color-text-muted); line-height: 1.8;">
-          Are you a content creator in the DevOps/Cloud/Cloud-Native space? We encourage self-submissions!
-          If you meet the criteria above, please don't hesitate to add yourself to the directory.
-          Just be honest about your contributions and impact.
+          Are you a content creator in the DevOps/Cloud/Cloud-Native space? Don't be shy! We <strong>encourage</strong> self-submissions.
+          If you're actively sharing knowledge and helping the community, you belong here. Just be honest about your contributions and impact.
         </p>
       </div>
 
-      <div style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid var(--color-border);">
-        <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
+      <!-- Stats & Impact -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Community Driven</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">Open</div>
+          <div class="stat-label">Source Forever</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">Free</div>
+          <div class="stat-label">Always & For Everyone</div>
+        </div>
+      </div>
+
+      <!-- Footer CTA -->
+      <div style="text-align: center; margin-top: 4rem; padding: 3rem 2rem; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%); border-radius: 1rem;">
+        <h2 style="font-size: 2rem; margin-bottom: 1rem; color: white;">Ready to Contribute?</h2>
+        <p style="font-size: 1.125rem; margin-bottom: 2rem; color: rgba(255,255,255,0.9);">
+          Help us build the most comprehensive directory of cloud-native voices
+        </p>
+        <a href="https://github.com/nimeshmora/awesome-cloudnatives/blob/main/CONTRIBUTING.md"
+           style="display: inline-block; background: white; color: var(--color-primary); padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 700; transition: transform 0.2s;"
+           onmouseover="this.style.transform='translateY(-2px)'"
+           onmouseout="this.style.transform='translateY(0)'">
+          Get Started →
+        </a>
+      </div>
+
+      <!-- Tech Stack -->
+      <div style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
+        <p style="color: var(--color-text-muted); margin-bottom: 1rem; font-size: 0.875rem;">
           Built with ❤️ by the cloud-native community
         </p>
-        <p style="color: var(--color-text-muted); font-size: 0.875rem;">
-          Powered by <a href="https://astro.build" target="_blank" rel="noopener" style="color: var(--color-primary);">Astro</a>
-          and <a href="https://pagefind.app" target="_blank" rel="noopener" style="color: var(--color-primary);">Pagefind</a>
-        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; font-size: 0.875rem; color: var(--color-text-muted);">
+          <a href="https://astro.build" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: none;">Astro</a>
+          <span>•</span>
+          <a href="https://pagefind.app" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: none;">Pagefind</a>
+          <span>•</span>
+          <a href="https://pages.github.com" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: none;">GitHub Pages</a>
+        </div>
       </div>
     </div>
   </div>
 
   <style>
-    .cta-link {
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature-card {
+      background: var(--color-bg-secondary);
+      border: 1px solid var(--color-border);
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-primary);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--color-text);
+    }
+
+    .feature-card p {
+      color: var(--color-text-muted);
+      line-height: 1.7;
+    }
+
+    .criteria-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .criteria-item {
       display: flex;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .criteria-icon {
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+
+    .criteria-item strong {
+      display: block;
+      color: var(--color-text);
+      margin-bottom: 0.25rem;
+      font-size: 1.125rem;
+    }
+
+    .criteria-item p {
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .contribute-card {
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 0.5rem;
-      padding: 1rem;
+      padding: 1.5rem;
       background: var(--color-bg-tertiary);
       border: 1px solid var(--color-border);
-      border-radius: 0.5rem;
-      color: var(--color-primary);
+      border-radius: 0.75rem;
       text-decoration: none;
-      font-weight: 600;
+      color: var(--color-text);
       transition: all 0.2s;
     }
 
-    .cta-link:hover {
-      background: var(--color-primary);
-      color: white;
-      transform: translateX(4px);
+    .contribute-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-primary);
+      background: var(--color-bg-secondary);
+    }
+
+    .contribute-card strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 1.125rem;
+    }
+
+    .contribute-card p {
+      color: var(--color-text-muted);
+      font-size: 0.875rem;
+      margin: 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: 2rem;
+      background: var(--color-bg-secondary);
+      border: 1px solid var(--color-border);
+      border-radius: 0.75rem;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      color: var(--color-text-muted);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem !important;
+      }
+
+      .feature-grid,
+      .criteria-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </BaseLayout>
