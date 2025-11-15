@@ -106,6 +106,46 @@ const uniqueExpertise = new Set(influencers.flatMap(i => i.expertise.primary)).s
               </a>
             )}
           </div>
+
+          <div class="card-actions">
+            {/* Primary CTA based on available content */}
+            {influencer.content?.courses ? (
+              <a href={influencer.content.courses} target="_blank" rel="noopener" class="cta-button">
+                📚 View Courses
+              </a>
+            ) : influencer.content?.youtube ? (
+              <a href={`https://youtube.com/${influencer.social.youtube}`} target="_blank" rel="noopener" class="cta-button">
+                ▶️ Watch Videos
+              </a>
+            ) : influencer.content?.blog ? (
+              <a href={influencer.content.blog} target="_blank" rel="noopener" class="cta-button">
+                📝 Read Blog
+              </a>
+            ) : influencer.content?.newsletter ? (
+              <a href={influencer.content.newsletter} target="_blank" rel="noopener" class="cta-button">
+                📧 Subscribe
+              </a>
+            ) : influencer.social.website ? (
+              <a href={influencer.social.website} target="_blank" rel="noopener" class="cta-button">
+                🌐 Visit Website
+              </a>
+            ) : influencer.social.github ? (
+              <a href={`https://github.com/${influencer.social.github}`} target="_blank" rel="noopener" class="cta-button">
+                👨‍💻 Follow on GitHub
+              </a>
+            ) : null}
+
+            {/* Share button */}
+            <button
+              class="share-button"
+              data-influencer-id={influencer.id}
+              data-influencer-name={influencer.name}
+              title="Share this profile"
+              onclick={`shareInfluencer('${influencer.id}', '${influencer.name.replace(/'/g, "\\'")}')`}
+            >
+              📤 Share
+            </button>
+          </div>
         </div>
       ))}
     </div>
@@ -151,6 +191,45 @@ const uniqueExpertise = new Set(influencers.flatMap(i => i.expertise.primary)).s
         });
       });
     });
+
+    // Share functionality
+    window.shareInfluencer = async function(id, name) {
+      const url = `${window.location.origin}${window.location.pathname.replace(/\/$/, '')}/influencers/${id}/`;
+      const text = `Check out ${name} on Awesome CloudNatives!`;
+
+      // Try native Web Share API first (mobile)
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: `${name} - Awesome CloudNatives`,
+            text: text,
+            url: url
+          });
+          return;
+        } catch (err) {
+          // User cancelled or error, fallback to copy
+        }
+      }
+
+      // Fallback: Copy to clipboard
+      try {
+        await navigator.clipboard.writeText(url);
+
+        // Show feedback
+        const button = event.target.closest('.share-button');
+        const originalText = button.textContent;
+        button.textContent = '✅ Copied!';
+        button.style.background = '#10b981';
+
+        setTimeout(() => {
+          button.textContent = originalText;
+          button.style.background = '';
+        }, 2000);
+      } catch (err) {
+        // Fallback: Show URL in prompt
+        prompt('Copy this URL:', url);
+      }
+    };
   </script>
 
   <style>
@@ -184,6 +263,67 @@ const uniqueExpertise = new Set(influencers.flatMap(i => i.expertise.primary)).s
       background: var(--color-primary);
       color: white;
       transform: translateY(-2px);
+    }
+
+    /* Card Actions */
+    .card-actions {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .cta-button {
+      flex: 1;
+      display: inline-block;
+      padding: 0.625rem 1rem;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      color: white;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-align: center;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      opacity: 0.9;
+    }
+
+    .share-button {
+      padding: 0.625rem 1rem;
+      background: var(--color-bg-tertiary);
+      color: var(--color-text);
+      border: 1px solid var(--color-border);
+      border-radius: 0.5rem;
+      font-weight: 600;
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .share-button:hover {
+      background: var(--color-bg-secondary);
+      border-color: var(--color-primary);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 480px) {
+      .card-actions {
+        flex-direction: column;
+      }
+
+      .cta-button,
+      .share-button {
+        width: 100%;
+      }
     }
   </style>
 </BaseLayout>
