@@ -34,7 +34,7 @@ export async function getStaticPaths() {
   return paths;
 }
 
-const { influencer, category } = Astro.props;
+const { influencer } = Astro.props;
 ---
 
 <BaseLayout title={influencer.name} description={influencer.tagline}>

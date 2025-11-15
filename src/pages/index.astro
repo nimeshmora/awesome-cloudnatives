@@ -17,7 +17,6 @@ async function getAllInfluencers() {
 
       for (const file of files) {
         if (file.endsWith('.json')) {
-          const filePath = join(categoryPath, file);
           const module = await import(`../../data/influencers/${category}/${file}`);
           influencers.push({
             ...module.default,
