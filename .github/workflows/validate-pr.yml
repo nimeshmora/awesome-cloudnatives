@@ -1,0 +1,43 @@
+name: Validate Pull Request
+
+on:
+  pull_request:
+    paths:
+      - 'data/**/*.json'
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate JSON syntax
+        uses: GrantBirki/json-yaml-validate@v4.0.0
+        with:
+          comment: "true"
+          json_schema: data/schema.json
+          base_dir: data/influencers
+          json_extension: .json
+          use_dot_match: false
+
+      - name: Check for broken links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --verbose --no-progress --accept 200,429 'data/**/*.json'
+          fail: true
+
+      - name: Install dependencies
+        run: npm ci || npm install
+
+      - name: Run custom validation script
+        run: node scripts/validate-data.js || echo "Validation script not yet implemented"

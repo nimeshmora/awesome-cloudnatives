@@ -1,0 +1,25 @@
+{
+  "id": "ahmet-alp-balkan",
+  "name": "Ahmet Alp Balkan",
+  "tagline": "Staff Developer Advocate at Google Cloud, Kubernetes contributor",
+  "bio": "Ahmet Alp Balkan is a Staff Developer Advocate at Google Cloud, working on Kubernetes and cloud-native technologies. Creator of kubectx/kubens and other popular Kubernetes tools.",
+  "avatar": "https://github.com/ahmetb.png",
+  "expertise": {
+    "primary": ["Kubernetes", "GCP", "DevOps"],
+    "secondary": ["Developer Tools", "CLI Tools"]
+  },
+  "social": {
+    "twitter": "ahmetb",
+    "github": "ahmetb",
+    "website": "https://ahmet.im"
+  },
+  "content": {
+    "blog": "https://ahmet.im/blog",
+    "speaking": true
+  },
+  "meta": {
+    "company": "Google Cloud",
+    "verified": true,
+    "added_date": "2025-01-15"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "liz-rice",
+  "name": "Liz Rice",
+  "tagline": "Chief Open Source Officer at Isovalent (Cisco), eBPF expert, and CNCF TOC Emeritus Chair",
+  "bio": "Liz Rice is Chief Open Source Officer at Isovalent (now part of Cisco) and Emeritus Chair of the CNCF Technical Oversight Committee. She's a leading expert in eBPF, container security, and cloud-native technologies, and author of 'Learning eBPF' and 'Container Security'.",
+  "avatar": "https://github.com/lizrice.png",
+  "expertise": {
+    "primary": ["Kubernetes", "DevSecOps", "Platform Engineering"],
+    "secondary": ["eBPF", "Containers", "Security", "Cilium"]
+  },
+  "social": {
+    "twitter": "lizrice",
+    "github": "lizrice",
+    "linkedin": "lizrice",
+    "youtube": "@lizrice"
+  },
+  "content": {
+    "speaking": true,
+    "workshops": true
+  },
+  "meta": {
+    "company": "Isovalent (Cisco)",
+    "verified": true,
+    "added_date": "2025-01-15"
+  }
+}

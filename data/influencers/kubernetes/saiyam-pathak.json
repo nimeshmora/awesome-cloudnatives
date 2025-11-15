@@ -1,0 +1,29 @@
+{
+  "id": "saiyam-pathak",
+  "name": "Saiyam Pathak",
+  "tagline": "CNCF Ambassador, Principal Developer Advocate at Loft Labs, founder of Kubesimplify",
+  "bio": "Saiyam Pathak is a CNCF Ambassador and Principal Developer Advocate at Loft Labs, focusing on vCluster and Kubernetes multi-tenancy. He's the founder of Kubesimplify and CNCF TAG Sustainability Lead, passionate about simplifying cloud-native technologies and building developer communities.",
+  "avatar": "https://github.com/saiyam1814.png",
+  "expertise": {
+    "primary": ["Kubernetes", "DevOps", "Platform Engineering"],
+    "secondary": ["CNCF Ecosystem", "Developer Relations", "vCluster", "Sustainability"]
+  },
+  "social": {
+    "twitter": "SaiyamPathak",
+    "github": "saiyam1814",
+    "linkedin": "saiyampathak",
+    "youtube": "@saiyam911"
+  },
+  "content": {
+    "youtube": "https://www.youtube.com/@saiyam911",
+    "newsletter": "https://saiyampathak.substack.com",
+    "speaking": true,
+    "workshops": true
+  },
+  "meta": {
+    "company": "Loft Labs",
+    "location": "India",
+    "verified": true,
+    "added_date": "2025-01-15"
+  }
+}

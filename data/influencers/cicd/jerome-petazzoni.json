@@ -1,0 +1,25 @@
+{
+  "id": "jerome-petazzoni",
+  "name": "Jérôme Petazzoni",
+  "tagline": "Docker educator, trainer, and container technology expert",
+  "bio": "Jérôme Petazzoni is a renowned Docker and container technology educator. Former member of the Docker team, he now focuses on teaching Kubernetes and container technologies worldwide.",
+  "avatar": "https://github.com/jpetazzo.png",
+  "expertise": {
+    "primary": ["Containers", "Kubernetes", "DevOps"],
+    "secondary": ["Docker", "Training", "CI/CD"]
+  },
+  "social": {
+    "twitter": "jpetazzo",
+    "github": "jpetazzo",
+    "website": "https://jpetazzo.github.io"
+  },
+  "content": {
+    "speaking": true,
+    "workshops": true,
+    "courses": "https://container.training"
+  },
+  "meta": {
+    "verified": true,
+    "added_date": "2025-01-15"
+  }
+}

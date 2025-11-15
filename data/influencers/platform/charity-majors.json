@@ -1,0 +1,25 @@
+{
+  "id": "charity-majors",
+  "name": "Charity Majors",
+  "tagline": "Co-founder and CTO of Honeycomb, observability expert, and engineering leader",
+  "bio": "Charity Majors is the co-founder and CTO of Honeycomb, pioneering observability practices for modern distributed systems. Known for her expertise in database systems, operations, and engineering culture.",
+  "avatar": "https://github.com/charity.png",
+  "expertise": {
+    "primary": ["Observability", "SRE", "Platform Engineering"],
+    "secondary": ["DevOps", "Databases", "Engineering Culture"]
+  },
+  "social": {
+    "twitter": "mipsytipsy",
+    "github": "charity",
+    "linkedin": "charity-majors"
+  },
+  "content": {
+    "blog": "https://charity.wtf",
+    "speaking": true
+  },
+  "meta": {
+    "company": "Honeycomb",
+    "verified": true,
+    "added_date": "2025-01-15"
+  }
+}

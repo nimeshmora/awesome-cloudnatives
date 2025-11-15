@@ -1,0 +1,28 @@
+{
+  "id": "scott-hanselman",
+  "name": "Scott Hanselman",
+  "tagline": "Partner Program Manager at Microsoft, podcaster, and developer advocate",
+  "bio": "Scott Hanselman is a Partner Program Manager at Microsoft working on Azure and developer tools. He's known for his Hanselminutes podcast and extensive work in developer education.",
+  "avatar": "https://github.com/shanselman.png",
+  "expertise": {
+    "primary": ["Azure", "DevOps", "Platform Engineering"],
+    "secondary": ["Developer Experience", "Web Development"]
+  },
+  "social": {
+    "twitter": "shanselman",
+    "github": "shanselman",
+    "linkedin": "shanselman",
+    "youtube": "@shanselman",
+    "website": "https://www.hanselman.com"
+  },
+  "content": {
+    "blog": "https://www.hanselman.com/blog",
+    "podcast": "https://hanselminutes.com",
+    "speaking": true
+  },
+  "meta": {
+    "company": "Microsoft",
+    "verified": true,
+    "added_date": "2025-01-15"
+  }
+}

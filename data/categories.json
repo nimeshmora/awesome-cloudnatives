@@ -1,0 +1,69 @@
+{
+  "categories": [
+    {
+      "id": "kubernetes",
+      "label": "Kubernetes",
+      "description": "Container orchestration, K8s ecosystem, and cloud-native platforms",
+      "icon": "⎈"
+    },
+    {
+      "id": "aws",
+      "label": "AWS",
+      "description": "Amazon Web Services cloud platform and services",
+      "icon": "☁️"
+    },
+    {
+      "id": "azure",
+      "label": "Azure",
+      "description": "Microsoft Azure cloud platform and services",
+      "icon": "☁️"
+    },
+    {
+      "id": "gcp",
+      "label": "Google Cloud",
+      "description": "Google Cloud Platform and services",
+      "icon": "☁️"
+    },
+    {
+      "id": "devops",
+      "label": "DevOps",
+      "description": "DevOps practices, culture, and automation",
+      "icon": "🔄"
+    },
+    {
+      "id": "cicd",
+      "label": "CI/CD",
+      "description": "Continuous Integration and Continuous Deployment",
+      "icon": "🚀"
+    },
+    {
+      "id": "platform",
+      "label": "Platform Engineering",
+      "description": "Platform engineering, internal developer platforms, and developer experience",
+      "icon": "🏗️"
+    },
+    {
+      "id": "security",
+      "label": "DevSecOps",
+      "description": "Security, compliance, and DevSecOps practices",
+      "icon": "🔒"
+    }
+  ],
+  "expertise": [
+    "Kubernetes",
+    "AWS",
+    "Azure",
+    "GCP",
+    "DevOps",
+    "CI/CD",
+    "GitOps",
+    "Platform Engineering",
+    "SRE",
+    "DevSecOps",
+    "Observability",
+    "Infrastructure as Code",
+    "Containers",
+    "Serverless",
+    "Microservices"
+  ]
+}

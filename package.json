@@ -1,0 +1,22 @@
+{
+  "name": "awesome-cloudnatives",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Discover the voices shaping DevOps, Cloud, and Cloud-Native - all in one place",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build && npx pagefind --site dist",
+    "preview": "astro preview",
+    "astro": "astro",
+    "validate": "node scripts/validate-data.js"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "astro": "^4.16.0",
+    "typescript": "^5.6.0"
+  },
+  "devDependencies": {
+    "pagefind": "^1.1.0"
+  }
+}

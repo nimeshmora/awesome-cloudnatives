@@ -1,0 +1,25 @@
+{
+  "id": "jessie-frazelle",
+  "name": "Jessie Frazelle",
+  "tagline": "Systems engineer, open source contributor, and container security expert",
+  "bio": "Jessie Frazelle is a systems engineer with extensive experience in containers, Linux, and security. Former engineer at Google, Microsoft, and Docker, now working on Oxide Computer Company.",
+  "avatar": "https://github.com/jessfraz.png",
+  "expertise": {
+    "primary": ["Containers", "DevSecOps", "DevOps"],
+    "secondary": ["Linux", "Systems Programming", "Security"]
+  },
+  "social": {
+    "twitter": "jessfraz",
+    "github": "jessfraz",
+    "website": "https://blog.jessfraz.com"
+  },
+  "content": {
+    "blog": "https://blog.jessfraz.com",
+    "speaking": true
+  },
+  "meta": {
+    "company": "Oxide Computer Company",
+    "verified": true,
+    "added_date": "2025-01-15"
+  }
+}

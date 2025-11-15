@@ -1,0 +1,29 @@
+{
+  "id": "viktor-farcic",
+  "name": "Viktor Farcic",
+  "tagline": "Developer Advocate at Upbound, DevOps Toolkit creator, and cloud-native advocate",
+  "bio": "Viktor Farcic is a Developer Advocate at Upbound and member of the Google Developer Experts, CDF Ambassadors, and Docker Captains groups. He creates content on DevOps, Kubernetes, GitOps, Crossplane, and modern software delivery practices.",
+  "avatar": "https://github.com/vfarcic.png",
+  "expertise": {
+    "primary": ["Kubernetes", "CI/CD", "GitOps", "DevOps"],
+    "secondary": ["Platform Engineering", "Containers", "Crossplane"]
+  },
+  "social": {
+    "twitter": "vfarcic",
+    "github": "vfarcic",
+    "linkedin": "viktorfarcic",
+    "youtube": "@DevOpsToolkit",
+    "website": "https://www.devopstoolkitseries.com"
+  },
+  "content": {
+    "blog": "https://www.devopstoolkitseries.com/posts",
+    "speaking": true,
+    "workshops": true,
+    "courses": "https://www.devopstoolkitseries.com/courses"
+  },
+  "meta": {
+    "company": "Upbound",
+    "verified": true,
+    "added_date": "2025-01-15"
+  }
+}

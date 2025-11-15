@@ -1,0 +1,28 @@
+{
+  "id": "corey-quinn",
+  "name": "Corey Quinn",
+  "tagline": "Cloud economist, AWS cost optimization expert, and host of Screaming in the Cloud podcast",
+  "bio": "Corey Quinn is the Chief Cloud Economist at The Duckbill Group, helping companies understand and optimize their AWS bills. Known for his witty commentary on cloud economics and AWS services.",
+  "avatar": "https://github.com/quinnypig.png",
+  "expertise": {
+    "primary": ["AWS", "DevOps"],
+    "secondary": ["Cloud Economics", "FinOps"]
+  },
+  "social": {
+    "twitter": "QuinnyPig",
+    "github": "quinnypig",
+    "linkedin": "cquinn",
+    "website": "https://www.lastweekinaws.com"
+  },
+  "content": {
+    "blog": "https://www.lastweekinaws.com/blog",
+    "newsletter": "https://www.lastweekinaws.com/newsletter",
+    "podcast": "https://www.screaminginthecloud.com",
+    "speaking": true
+  },
+  "meta": {
+    "company": "The Duckbill Group",
+    "verified": true,
+    "added_date": "2025-01-15"
+  }
+}

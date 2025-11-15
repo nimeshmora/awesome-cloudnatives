@@ -1,0 +1,30 @@
+{
+  "id": "mumshad-mannambeth",
+  "name": "Mumshad Mannambeth",
+  "tagline": "Kubernetes educator, founder of KodeKloud, revolutionizing hands-on DevOps training",
+  "bio": "Mumshad Mannambeth is the founder and CEO of KodeKloud, a Certified Kubernetes Training Partner. He has revolutionized online learning in DevOps and Kubernetes, teaching over 600,000 students worldwide with his hands-on, interactive approach to complex cloud-native concepts.",
+  "avatar": "https://github.com/mmumshad.png",
+  "expertise": {
+    "primary": ["Kubernetes", "DevOps", "Platform Engineering", "Containers"],
+    "secondary": ["Cloud Native Computing", "Automation", "CKA/CKAD Training"]
+  },
+  "social": {
+    "twitter": "mmumshad",
+    "github": "mmumshad",
+    "linkedin": "mmumshad",
+    "youtube": "@KodeKloud",
+    "website": "https://kodekloud.com"
+  },
+  "content": {
+    "blog": "https://kodekloud.com/blog/author/mumshad/",
+    "courses": "https://kodekloud.com",
+    "speaking": true,
+    "workshops": true
+  },
+  "meta": {
+    "company": "KodeKloud",
+    "location": "Singapore",
+    "verified": true,
+    "added_date": "2025-11-15"
+  }
+}

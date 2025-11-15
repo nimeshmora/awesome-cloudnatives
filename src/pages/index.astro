@@ -1,0 +1,208 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { readdir } from 'node:fs/promises';
+import { join } from 'node:path';
+
+// Function to get all influencers from data directory
+async function getAllInfluencers() {
+  const influencers: any[] = [];
+  const dataPath = join(process.cwd(), 'data', 'influencers');
+
+  try {
+    const categories = await readdir(dataPath);
+
+    for (const category of categories) {
+      const categoryPath = join(dataPath, category);
+      const files = await readdir(categoryPath);
+
+      for (const file of files) {
+        if (file.endsWith('.json')) {
+          const filePath = join(categoryPath, file);
+          const module = await import(`../../data/influencers/${category}/${file}`);
+          influencers.push({
+            ...module.default,
+            category
+          });
+        }
+      }
+    }
+  } catch (error) {
+    console.error('Error loading influencers:', error);
+  }
+
+  return influencers.sort((a, b) => a.name.localeCompare(b.name));
+}
+
+const influencers = await getAllInfluencers();
+const categories = await import('../../data/categories.json');
+const expertise = categories.default.expertise;
+
+// Get stats
+const totalInfluencers = influencers.length;
+const uniqueExpertise = new Set(influencers.flatMap(i => i.expertise.primary)).size;
+---
+
+<BaseLayout title="Home">
+  <div class="hero">
+    <div class="container">
+      <h1>Awesome CloudNatives</h1>
+      <p>
+        Discover {totalInfluencers}+ voices shaping DevOps, Cloud, and Cloud-Native.<br/>
+        All in one place. Curated by the community.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem;">
+        <a href="https://github.com/nimeshmora/awesome-cloudnatives" class="cta-btn primary">
+          ⭐ Star on GitHub
+        </a>
+        <a href="https://github.com/nimeshmora/awesome-cloudnatives/blob/main/CONTRIBUTING.md" class="cta-btn secondary">
+          ➕ Add Influencer
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Search (Pagefind will be integrated here) -->
+    <div class="search-container">
+      <div id="search"></div>
+    </div>
+
+    <!-- Stats -->
+    <div style="text-align: center; margin: 2rem 0; color: var(--color-text-muted);">
+      <strong>{totalInfluencers}</strong> influencers across <strong>{uniqueExpertise}</strong> expertise areas
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="filters" id="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      {expertise.map((exp: string) => (
+        <button class="filter-btn" data-filter={exp}>{exp}</button>
+      ))}
+    </div>
+
+    <!-- Influencers Grid -->
+    <div class="influencers-grid" id="influencers-grid">
+      {influencers.map((influencer) => (
+        <div class="card" data-expertise={JSON.stringify(influencer.expertise.primary)}>
+          <div class="card-header">
+            {influencer.avatar && (
+              <img src={influencer.avatar} alt={influencer.name} class="avatar" loading="lazy" />
+            )}
+            <div class="card-title">
+              <h3>
+                <a href={`/influencers/${influencer.id}/`}>{influencer.name}</a>
+              </h3>
+            </div>
+          </div>
+
+          <p class="tagline">{influencer.tagline}</p>
+
+          <div class="tags">
+            {influencer.expertise.primary.slice(0, 3).map((exp: string) => (
+              <span class="tag">{exp}</span>
+            ))}
+          </div>
+
+          <div class="social-links">
+            {influencer.social.github && (
+              <a href={`https://github.com/${influencer.social.github}`} target="_blank" rel="noopener" class="social-link">
+                GitHub
+              </a>
+            )}
+            {influencer.social.twitter && (
+              <a href={`https://twitter.com/${influencer.social.twitter}`} target="_blank" rel="noopener" class="social-link">
+                Twitter
+              </a>
+            )}
+            {influencer.social.linkedin && (
+              <a href={`https://linkedin.com/in/${influencer.social.linkedin}`} target="_blank" rel="noopener" class="social-link">
+                LinkedIn
+              </a>
+            )}
+            {influencer.social.youtube && (
+              <a href={`https://youtube.com/${influencer.social.youtube}`} target="_blank" rel="noopener" class="social-link">
+                YouTube
+              </a>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Pagefind UI -->
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  <script is:inline src="/pagefind/pagefind-ui.js"></script>
+  <script is:inline>
+    // Initialize Pagefind search
+    if (typeof PagefindUI !== 'undefined') {
+      new PagefindUI({
+        element: "#search",
+        showSubResults: true,
+        showImages: false
+      });
+    }
+
+    // Filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        // Update active state
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Filter cards
+        cards.forEach(card => {
+          if (filter === 'all') {
+            card.style.display = 'flex';
+          } else {
+            const expertise = JSON.parse(card.getAttribute('data-expertise') || '[]');
+            if (expertise.includes(filter)) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+  </script>
+
+  <style>
+    .cta-btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .cta-btn.primary {
+      background: var(--color-primary);
+      color: white;
+    }
+
+    .cta-btn.primary:hover {
+      background: var(--color-primary-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .cta-btn.secondary {
+      background: transparent;
+      color: var(--color-primary);
+      border: 2px solid var(--color-primary);
+    }
+
+    .cta-btn.secondary:hover {
+      background: var(--color-primary);
+      color: white;
+      transform: translateY(-2px);
+    }
+  </style>
+</BaseLayout>

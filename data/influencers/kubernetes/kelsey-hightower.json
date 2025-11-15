@@ -1,0 +1,25 @@
+{
+  "id": "kelsey-hightower",
+  "name": "Kelsey Hightower",
+  "tagline": "Retired Google Cloud engineer, Kubernetes pioneer, and cloud-native advocate",
+  "bio": "Kelsey Hightower is a former Distinguished Engineer at Google Cloud and one of the most influential voices in the Kubernetes and cloud-native community. After retiring in 2023, he continues to contribute as a non-executive director and advisor.",
+  "avatar": "https://github.com/kelseyhightower.png",
+  "expertise": {
+    "primary": ["Kubernetes", "GCP", "DevOps", "Platform Engineering"],
+    "secondary": ["Containers", "Microservices", "Infrastructure as Code"]
+  },
+  "social": {
+    "twitter": "kelseyhightower",
+    "github": "kelseyhightower",
+    "mastodon": "@kelseyhightower@mastodon.social"
+  },
+  "content": {
+    "speaking": true,
+    "workshops": true
+  },
+  "meta": {
+    "company": "Independent (Retired)",
+    "verified": true,
+    "added_date": "2025-01-15"
+  }
+}

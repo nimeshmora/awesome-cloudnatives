@@ -1,0 +1,25 @@
+{
+  "id": "brendan-burns",
+  "name": "Brendan Burns",
+  "tagline": "Co-founder of Kubernetes, Corporate VP at Microsoft Azure",
+  "bio": "Brendan Burns is one of the co-founders of Kubernetes and currently serves as Corporate Vice President at Microsoft Azure. He's a leading expert in distributed systems and container orchestration.",
+  "avatar": "https://github.com/brendandburns.png",
+  "expertise": {
+    "primary": ["Kubernetes", "Azure", "Containers", "DevOps"],
+    "secondary": ["Microservices", "Distributed Systems"]
+  },
+  "social": {
+    "twitter": "brendandburns",
+    "github": "brendandburns",
+    "linkedin": "brendan-burns"
+  },
+  "content": {
+    "speaking": true,
+    "workshops": true
+  },
+  "meta": {
+    "company": "Microsoft Azure",
+    "verified": true,
+    "added_date": "2025-01-15"
+  }
+}

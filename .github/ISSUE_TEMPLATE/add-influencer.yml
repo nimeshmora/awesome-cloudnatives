@@ -1,0 +1,145 @@
+name: Suggest an Influencer
+description: Nominate someone to be added to Awesome CloudNatives
+title: "[Add]: "
+labels: ["addition", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting someone! Please fill out the information below.
+
+  - type: input
+    id: name
+    attributes:
+      label: Full Name
+      description: The influencer's full name
+      placeholder: "e.g., Kelsey Hightower"
+    validations:
+      required: true
+
+  - type: input
+    id: tagline
+    attributes:
+      label: Brief Description
+      description: One-line description of what they're known for
+      placeholder: "e.g., Principal Engineer at Google Cloud, Kubernetes advocate"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Primary Category
+      description: Which category best fits this person?
+      options:
+        - Kubernetes
+        - AWS
+        - Azure
+        - Google Cloud (GCP)
+        - DevOps
+        - CI/CD
+        - Platform Engineering
+        - DevSecOps
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: expertise
+    attributes:
+      label: Expertise Areas
+      description: Select all that apply (choose 1-5)
+      options:
+        - label: Kubernetes
+        - label: AWS
+        - label: Azure
+        - label: GCP
+        - label: DevOps
+        - label: CI/CD
+        - label: GitOps
+        - label: Platform Engineering
+        - label: SRE
+        - label: DevSecOps
+        - label: Observability
+        - label: Infrastructure as Code
+        - label: Containers
+        - label: Serverless
+        - label: Microservices
+
+  - type: input
+    id: github
+    attributes:
+      label: GitHub Username
+      description: If they have one
+      placeholder: "e.g., kelseyhightower"
+
+  - type: input
+    id: twitter
+    attributes:
+      label: Twitter/X Handle
+      description: Without the @
+      placeholder: "e.g., kelseyhightower"
+
+  - type: input
+    id: linkedin
+    attributes:
+      label: LinkedIn Username
+      description: The part after linkedin.com/in/
+      placeholder: "e.g., kelseyhightower"
+
+  - type: input
+    id: youtube
+    attributes:
+      label: YouTube Channel
+      description: Channel handle or ID
+      placeholder: "e.g., @channelname"
+
+  - type: input
+    id: website
+    attributes:
+      label: Website/Blog
+      description: Personal website or blog URL
+      placeholder: "https://example.com"
+
+  - type: textarea
+    id: content
+    attributes:
+      label: Content Examples
+      description: Links to their content (blog posts, videos, talks, courses, etc.)
+      placeholder: |
+        - Blog: https://...
+        - Newsletter: https://...
+        - YouTube: https://...
+        - Speaking: Conference talks, etc.
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why should they be included?
+      description: What makes this person valuable to the community?
+      placeholder: Explain their contributions, impact, and why they're influential in the space
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: self_submission
+    attributes:
+      label: Self-Submission
+      description: Is this your own profile?
+      options:
+        - label: Yes, I'm adding myself
+        - label: No, I'm nominating someone else
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please verify the following
+      options:
+        - label: This person actively creates content (blogs, videos, talks, courses)
+          required: true
+        - label: They have at least 6 months of consistent public presence
+          required: true
+        - label: I've checked for duplicates (they're not already in the directory)
+          required: true
+        - label: All provided links are currently active
+          required: true

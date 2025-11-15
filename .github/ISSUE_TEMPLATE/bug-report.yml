@@ -1,0 +1,61 @@
+name: Bug Report
+description: Report a problem with the website or data
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting an issue! Please describe the problem below.
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Issue Type
+      description: What kind of problem is this?
+      options:
+        - Website not working correctly
+        - Broken link in profile
+        - Incorrect information
+        - Search not working
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the bug or issue
+      placeholder: A clear description of what's wrong
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this issue?
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. See error
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain the problem
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      description: If it's a website issue, which browser are you using?
+      placeholder: "e.g., Chrome 120, Firefox 121, Safari 17"

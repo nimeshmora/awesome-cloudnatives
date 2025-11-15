@@ -1,0 +1,26 @@
+{
+  "id": "forrest-brazeal",
+  "name": "Forrest Brazeal",
+  "tagline": "Cloud architect, serverless advocate, and creator of Cloud Irregular newsletter",
+  "bio": "Forrest Brazeal is a cloud architect and content creator known for his Cloud Irregular newsletter, serverless expertise, and creative approach to explaining cloud concepts through comics and videos.",
+  "avatar": "https://github.com/forrestbrazeal.png",
+  "expertise": {
+    "primary": ["AWS", "Serverless", "DevOps"],
+    "secondary": ["Cloud Architecture", "Developer Experience"]
+  },
+  "social": {
+    "twitter": "forrestbrazeal",
+    "github": "forrestbrazeal",
+    "linkedin": "forrestbrazeal",
+    "website": "https://forrestbrazeal.com"
+  },
+  "content": {
+    "blog": "https://forrestbrazeal.com",
+    "newsletter": "https://cloudirregular.substack.com",
+    "speaking": true
+  },
+  "meta": {
+    "verified": true,
+    "added_date": "2025-01-15"
+  }
+}

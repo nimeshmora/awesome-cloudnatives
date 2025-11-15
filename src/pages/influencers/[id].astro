@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { readdir } from 'node:fs/promises';
+import { join } from 'node:path';
+
+export async function getStaticPaths() {
+  const paths: any[] = [];
+  const dataPath = join(process.cwd(), 'data', 'influencers');
+
+  try {
+    const categories = await readdir(dataPath);
+
+    for (const category of categories) {
+      const categoryPath = join(dataPath, category);
+      const files = await readdir(categoryPath);
+
+      for (const file of files) {
+        if (file.endsWith('.json')) {
+          const module = await import(`../../../data/influencers/${category}/${file}`);
+          paths.push({
+            params: { id: module.default.id },
+            props: {
+              influencer: module.default,
+              category
+            }
+          });
+        }
+      }
+    }
+  } catch (error) {
+    console.error('Error loading influencers:', error);
+  }
+
+  return paths;
+}
+
+const { influencer, category } = Astro.props;
+---
+
+<BaseLayout title={influencer.name} description={influencer.tagline}>
+  <div class="container">
+    <a href="/" style="color: var(--color-primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem;">
+      ← Back to all influencers
+    </a>
+
+    <div class="profile-header" data-pagefind-body>
+      {influencer.avatar && (
+        <img src={influencer.avatar} alt={influencer.name} class="profile-avatar" />
+      )}
+
+      <div class="profile-info">
+        <h1 data-pagefind-meta="title">{influencer.name}</h1>
+
+        {influencer.meta?.company && (
+          <p style="color: var(--color-text-muted); font-size: 1.125rem; margin-bottom: 0.5rem;">
+            {influencer.meta.company}
+          </p>
+        )}
+
+        <div class="tags" style="margin: 1rem 0;">
+          {influencer.expertise.primary.map((exp: string) => (
+            <span class="tag" data-pagefind-filter="expertise">{exp}</span>
+          ))}
+        </div>
+
+        <p class="tagline" style="font-size: 1.125rem; color: var(--color-text);">
+          {influencer.tagline}
+        </p>
+
+        {influencer.bio && (
+          <p class="profile-bio">{influencer.bio}</p>
+        )}
+
+        {influencer.meta?.location && (
+          <p style="color: var(--color-text-muted); margin-top: 1rem;">
+            📍 {influencer.meta.location}
+          </p>
+        )}
+      </div>
+    </div>
+
+    <!-- Social Links Section -->
+    <div style="background: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 2rem;">
+      <h2 style="font-size: 1.25rem; margin-bottom: 1rem;">Connect</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+        {influencer.social.github && (
+          <a href={`https://github.com/${influencer.social.github}`} target="_blank" rel="noopener" class="content-link">
+            <span>🐙</span> GitHub: @{influencer.social.github}
+          </a>
+        )}
+        {influencer.social.twitter && (
+          <a href={`https://twitter.com/${influencer.social.twitter}`} target="_blank" rel="noopener" class="content-link">
+            <span>🐦</span> Twitter: @{influencer.social.twitter}
+          </a>
+        )}
+        {influencer.social.linkedin && (
+          <a href={`https://linkedin.com/in/${influencer.social.linkedin}`} target="_blank" rel="noopener" class="content-link">
+            <span>💼</span> LinkedIn
+          </a>
+        )}
+        {influencer.social.youtube && (
+          <a href={`https://youtube.com/${influencer.social.youtube}`} target="_blank" rel="noopener" class="content-link">
+            <span>📺</span> YouTube
+          </a>
+        )}
+        {influencer.social.website && (
+          <a href={influencer.social.website} target="_blank" rel="noopener" class="content-link">
+            <span>🌐</span> Website
+          </a>
+        )}
+        {influencer.social.mastodon && (
+          <a href={`https://${influencer.social.mastodon.split('@')[2]}/@${influencer.social.mastodon.split('@')[1]}`} target="_blank" rel="noopener" class="content-link">
+            <span>🐘</span> Mastodon
+          </a>
+        )}
+      </div>
+    </div>
+
+    <!-- Content & Resources -->
+    {(influencer.content?.blog || influencer.content?.newsletter || influencer.content?.podcast || influencer.content?.courses) && (
+      <div style="background: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 2rem;">
+        <h2 style="font-size: 1.25rem; margin-bottom: 1rem;">Content & Resources</h2>
+        <div class="content-links">
+          {influencer.content.blog && (
+            <a href={influencer.content.blog} target="_blank" rel="noopener" class="content-link">
+              📝 Blog
+            </a>
+          )}
+          {influencer.content.newsletter && (
+            <a href={influencer.content.newsletter} target="_blank" rel="noopener" class="content-link">
+              📧 Newsletter
+            </a>
+          )}
+          {influencer.content.podcast && (
+            <a href={influencer.content.podcast} target="_blank" rel="noopener" class="content-link">
+              🎙️ Podcast
+            </a>
+          )}
+          {influencer.content.courses && (
+            <a href={influencer.content.courses} target="_blank" rel="noopener" class="content-link">
+              🎓 Courses
+            </a>
+          )}
+          {influencer.content.speaking && (
+            <p style="color: var(--color-text-muted);">
+              🎤 Available for speaking engagements
+            </p>
+          )}
+          {influencer.content.workshops && (
+            <p style="color: var(--color-text-muted);">
+              🛠️ Offers workshops and training
+            </p>
+          )}
+        </div>
+      </div>
+    )}
+
+    <!-- Expertise Details -->
+    {influencer.expertise.secondary && influencer.expertise.secondary.length > 0 && (
+      <div style="background: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: 0.75rem; padding: 1.5rem;">
+        <h2 style="font-size: 1.25rem; margin-bottom: 1rem;">Additional Expertise</h2>
+        <div class="tags">
+          {influencer.expertise.secondary.map((exp: string) => (
+            <span class="tag" style="background: var(--color-bg-tertiary); color: var(--color-text-muted);">{exp}</span>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</BaseLayout>
