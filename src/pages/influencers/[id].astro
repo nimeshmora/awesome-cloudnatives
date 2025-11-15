@@ -1,35 +1,23 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { readdir } from 'node:fs/promises';
-import { join } from 'node:path';
 
 export async function getStaticPaths() {
-  const paths: any[] = [];
-  const dataPath = join(process.cwd(), 'data', 'influencers');
+  // Use import.meta.glob to get all influencer JSON files
+  const allInfluencerFiles = await import.meta.glob('../../../data/influencers/**/*.json', { eager: true });
 
-  try {
-    const categories = await readdir(dataPath);
+  const paths = Object.entries(allInfluencerFiles).map(([filepath, file]: [string, any]) => {
+    // Extract category from file path
+    const pathParts = filepath.split('/');
+    const category = pathParts[pathParts.length - 2] || 'unknown';
 
-    for (const category of categories) {
-      const categoryPath = join(dataPath, category);
-      const files = await readdir(categoryPath);
-
-      for (const file of files) {
-        if (file.endsWith('.json')) {
-          const module = await import(`../../../data/influencers/${category}/${file}`);
-          paths.push({
-            params: { id: module.default.id },
-            props: {
-              influencer: module.default,
-              category
-            }
-          });
-        }
+    return {
+      params: { id: file.default.id },
+      props: {
+        influencer: file.default,
+        category
       }
-    }
-  } catch (error) {
-    console.error('Error loading influencers:', error);
-  }
+    };
+  });
 
   return paths;
 }

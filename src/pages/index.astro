@@ -1,38 +1,20 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { readdir } from 'node:fs/promises';
-import { join } from 'node:path';
 
-// Function to get all influencers from data directory
-async function getAllInfluencers() {
-  const influencers: any[] = [];
-  const dataPath = join(process.cwd(), 'data', 'influencers');
+// Use Astro.glob to import all influencer JSON files
+const allInfluencerFiles = await Astro.glob('../../data/influencers/**/*.json');
 
-  try {
-    const categories = await readdir(dataPath);
+// Transform and categorize influencers
+const influencers = allInfluencerFiles.map((file) => {
+  // Extract category from file path
+  const pathParts = file.file?.split('/') || [];
+  const category = pathParts[pathParts.length - 2] || 'unknown';
 
-    for (const category of categories) {
-      const categoryPath = join(dataPath, category);
-      const files = await readdir(categoryPath);
-
-      for (const file of files) {
-        if (file.endsWith('.json')) {
-          const module = await import(`../../data/influencers/${category}/${file}`);
-          influencers.push({
-            ...module.default,
-            category
-          });
-        }
-      }
-    }
-  } catch (error) {
-    console.error('Error loading influencers:', error);
-  }
-
-  return influencers.sort((a, b) => a.name.localeCompare(b.name));
-}
-
-const influencers = await getAllInfluencers();
+  return {
+    ...file.default,
+    category
+  };
+}).sort((a, b) => a.name.localeCompare(b.name));
 const categories = await import('../../data/categories.json');
 const expertise = categories.default.expertise;
 
