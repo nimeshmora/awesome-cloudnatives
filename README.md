@@ -23,7 +23,7 @@ Whether you're looking for:
 
 ## 🌐 Website
 
-**Browse the directory:** [https://awesomecloudnatives.cloud](Official web page)
+**Browse the directory:** [Official web page](https://awesomecloudnatives.cloud)
 
 Features:
 - 🔍 **Full-text search** powered by Pagefind
