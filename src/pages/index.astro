@@ -43,9 +43,13 @@ const uniqueExpertise = new Set(influencers.flatMap(i => i.expertise.primary)).s
   </div>
 
   <div class="container">
-    <!-- Search (Pagefind will be integrated here) -->
-    <div class="search-container">
-      <div id="search"></div>
+    <!-- Search Section -->
+    <div class="search-section">
+      <h2 class="search-title">🔍 Search Influencers</h2>
+      <p class="search-subtitle">Find cloud-native experts by name, expertise, or technology</p>
+      <div class="search-container">
+        <div id="search"></div>
+      </div>
     </div>
 
     <!-- Stats -->
@@ -231,6 +235,48 @@ const uniqueExpertise = new Set(influencers.flatMap(i => i.expertise.primary)).s
   </script>
 
   <style>
+    /* Search Section */
+    .search-section {
+      background: var(--color-bg-secondary);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border: 1px solid var(--color-border);
+    }
+
+    .search-title {
+      text-align: center;
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .search-subtitle {
+      text-align: center;
+      color: var(--color-text-muted);
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .search-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Pagefind UI Customization */
+    #search {
+      --pagefind-ui-scale: 1;
+      --pagefind-ui-primary: var(--color-primary);
+      --pagefind-ui-text: var(--color-text);
+      --pagefind-ui-background: var(--color-bg);
+      --pagefind-ui-border: var(--color-border);
+      --pagefind-ui-tag: var(--color-accent);
+    }
+
     .cta-btn {
       display: inline-block;
       padding: 0.75rem 1.5rem;

@@ -3,13 +3,14 @@
   "name": "Vishakha Sadhwani",
   "tagline": "Sr. Solutions Architect at NVIDIA, cloud educator, and top 1% LinkedIn influencer",
   "bio": "Vishakha Sadhwani is a Senior Solutions Architect at NVIDIA and former Sr. Cloud Architect at Google Cloud. She's a top 1% LinkedIn influencer with 72K+ followers, specializing in AI infrastructure, cloud computing, and DevOps mentorship. Known for her weekly newsletter and daily content on cloud careers.",
-  "avatar": "https://media.licdn.com/dms/image/v2/D5603AQH8wLJKGxVK6g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1697495238956?e=1740614400&v=beta&t=9xQvKGxJLYqJLKQJNqLJKGxVK6g",
+  "avatar": "https://ui-avatars.com/api/?name=Vishakha+Sadhwani&size=200&background=667eea&color=fff&bold=true",
   "expertise": {
     "primary": ["DevOps", "AWS", "GCP", "Infrastructure as Code"],
     "secondary": ["Kubernetes", "MLOps", "CI/CD", "Cloud Security"]
   },
   "social": {
     "linkedin": "vsadhwani",
+    "twitter": "vishakhasadhwa3",
     "website": "https://vishakha-sadhwani.beehiiv.com"
   },
   "content": {
