@@ -23,7 +23,7 @@ Whether you're looking for:
 
 ## 🌐 Website
 
-**Browse the directory:** [https://nimeshmora.github.io/awesome-cloudnatives](https://awesomecloudnatives.cloud)
+**Browse the directory:** [https://awesomecloudnatives.cloud](Official web page)
 
 Features:
 - 🔍 **Full-text search** powered by Pagefind
