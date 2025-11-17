@@ -1,0 +1,27 @@
+{
+  "id": "govardhana-miriyala",
+  "name": "Govardhana Miriyala Kannaiah",
+  "tagline": "Founder of NeuVeu, author of 'Kubernetes Anti-Patterns', and Technical Author at ByteByteGo",
+  "bio": "Govardhana Miriyala Kannaiah is the founder of NeuVeu consulting and author of 'Kubernetes Anti-Patterns' (Packt Publishing). With 17+ years of IT experience and 125K+ LinkedIn followers, he's a recognized voice in DevOps, multi-cloud architecture, and Kubernetes best practices.",
+  "avatar": "https://media.licdn.com/dms/image/v2/D5603AQH8wLJKGxVK6g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1697495238956?e=1740614400&v=beta&t=gopu",
+  "expertise": {
+    "primary": ["Kubernetes", "DevOps", "AWS", "Platform Engineering"],
+    "secondary": ["FinOps", "GitOps", "SRE", "MLOps", "Multi-Cloud"]
+  },
+  "social": {
+    "twitter": "govardhana_mk",
+    "linkedin": "govardhana-miriyala-kannaiah",
+    "website": "https://neuveu.com"
+  },
+  "content": {
+    "blog": "https://dev.to/vardhangopu",
+    "courses": "https://govardhanamk.gumroad.com",
+    "speaking": true
+  },
+  "meta": {
+    "company": "NeuVeu",
+    "location": "Chittoor, India",
+    "verified": true,
+    "added_date": "2025-11-15"
+  }
+}

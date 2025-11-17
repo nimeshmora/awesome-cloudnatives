@@ -1,0 +1,30 @@
+{
+  "id": "abhishek-veeramalla",
+  "name": "Abhishek Veeramalla",
+  "tagline": "Founder of AKVA, Docker Captain, and YouTube educator with 500K+ subscribers teaching DevOps",
+  "bio": "Abhishek Veeramalla is the Founder & CTO of AKVA and a Principal Software Engineer at Red Hat. A Docker Captain and GitHub Star, he's built a community of 500K+ YouTube subscribers and 150K+ LinkedIn followers, helping thousands land DevOps jobs through comprehensive free courses.",
+  "avatar": "https://github.com/iam-veeramalla.png",
+  "expertise": {
+    "primary": ["Kubernetes", "DevOps", "AWS", "GitOps"],
+    "secondary": ["Docker", "Terraform", "Python", "MLOps", "ArgoCD"]
+  },
+  "social": {
+    "twitter": "AbhiVeeramalla",
+    "github": "iam-veeramalla",
+    "linkedin": "abhishek-veeramalla",
+    "youtube": "@AbhishekVeeramalla",
+    "website": "https://www.abhishekveeramalla.com"
+  },
+  "content": {
+    "blog": "https://abhishekveeramalla-av.medium.com",
+    "courses": "https://www.udemy.com/user/abhishek-veeramalla/",
+    "speaking": true,
+    "workshops": true
+  },
+  "meta": {
+    "company": "AKVA",
+    "location": "Hyderabad, India",
+    "verified": true,
+    "added_date": "2025-11-15"
+  }
+}

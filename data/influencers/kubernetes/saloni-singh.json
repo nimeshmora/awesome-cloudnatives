@@ -1,0 +1,24 @@
+{
+  "id": "saloni-singh",
+  "name": "Saloni Singh",
+  "tagline": "AWS Community Builder working with GKE at Google, specializing in Kubernetes and cloud automation",
+  "bio": "Saloni Singh is an AWS Community Builder currently working at Google with GKE (Google Kubernetes Engine). With 5+ years of hands-on experience, she specializes in cloud solutions, DevOps automation, and container orchestration across AWS and Google Cloud platforms.",
+  "avatar": "https://media.licdn.com/dms/image/v2/D5603AQGxVK6g8wLJKG/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1697495238956?e=1740614400&v=beta&t=placeholder",
+  "expertise": {
+    "primary": ["Kubernetes", "AWS", "GCP", "DevOps"],
+    "secondary": ["Docker", "Terraform", "CI/CD", "Python"]
+  },
+  "social": {
+    "linkedin": "saloni-singh-aws"
+  },
+  "content": {
+    "blog": "https://medium.com/@singhsaloni890",
+    "speaking": true
+  },
+  "meta": {
+    "company": "Google",
+    "location": "India",
+    "verified": true,
+    "added_date": "2025-11-15"
+  }
+}

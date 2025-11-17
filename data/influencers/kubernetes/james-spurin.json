@@ -1,0 +1,30 @@
+{
+  "id": "james-spurin",
+  "name": "James Spurin",
+  "tagline": "Docker Captain, CNCF Ambassador, and Kubestronaut creating industry-recognized training",
+  "bio": "James Spurin is a Docker Captain, CNCF Ambassador, and Kubestronaut with over 25 years of technology experience. He creates comprehensive courses on Docker, Kubernetes, and Ansible through DiveInto.com, teaching thousands of students across 130+ countries.",
+  "avatar": "https://github.com/spurin.png",
+  "expertise": {
+    "primary": ["Docker", "Kubernetes", "DevOps", "Containers"],
+    "secondary": ["Ansible", "Cloud Native", "Linux Administration"]
+  },
+  "social": {
+    "twitter": "jamesspurin",
+    "github": "spurin",
+    "linkedin": "jamesspurin",
+    "youtube": "@DiveInto",
+    "website": "https://diveinto.com"
+  },
+  "content": {
+    "blog": "https://spurin.com",
+    "courses": "https://www.udemy.com/user/james-spurin/",
+    "speaking": true,
+    "workshops": true
+  },
+  "meta": {
+    "company": "DiveInto.com",
+    "location": "Chorleywood, UK",
+    "verified": true,
+    "added_date": "2025-11-15"
+  }
+}

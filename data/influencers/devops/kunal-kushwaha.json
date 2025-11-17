@@ -1,0 +1,30 @@
+{
+  "id": "kunal-kushwaha",
+  "name": "Kunal Kushwaha",
+  "tagline": "CNCF Ambassador, GitHub Star, and founder of WeMakeDevs teaching millions to code",
+  "bio": "Kunal Kushwaha is a Senior Developer Advocate at CAST AI and founder of WeMakeDevs. A CNCF Ambassador, GitHub Star, and TEDx speaker with 965K+ YouTube subscribers, he's passionate about open source, cloud-native technologies, and helping developers grow through comprehensive bootcamps and community initiatives.",
+  "avatar": "https://github.com/kunal-kushwaha.png",
+  "expertise": {
+    "primary": ["Kubernetes", "DevOps", "Platform Engineering"],
+    "secondary": ["Cloud Native", "Developer Relations", "Java", "AI"]
+  },
+  "social": {
+    "twitter": "kunalstwt",
+    "github": "kunal-kushwaha",
+    "linkedin": "kunal-kushwaha",
+    "youtube": "@KunalKushwaha",
+    "website": "https://www.techwithkunal.com"
+  },
+  "content": {
+    "blog": "https://www.wemakedevs.org",
+    "courses": "https://github.com/kunal-kushwaha/DSA-Bootcamp-Java",
+    "speaking": true,
+    "workshops": true
+  },
+  "meta": {
+    "company": "CAST AI",
+    "location": "London, UK",
+    "verified": true,
+    "added_date": "2025-11-15"
+  }
+}

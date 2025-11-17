@@ -1,0 +1,30 @@
+{
+  "id": "alex-xu",
+  "name": "Alex Xu",
+  "tagline": "Co-founder of ByteByteGo, bestselling author, and system design expert with 1M+ newsletter subscribers",
+  "bio": "Alex Xu is the co-founder of ByteByteGo and bestselling author of the 'System Design Interview' series. A former FAANG engineer, he built one of the largest technology newsletters with 1M+ subscribers, helping engineers worldwide master system design and prepare for technical interviews.",
+  "avatar": "https://github.com/alex-xu-system.png",
+  "expertise": {
+    "primary": ["DevOps", "Platform Engineering"],
+    "secondary": ["System Design", "Distributed Systems", "Software Architecture"]
+  },
+  "social": {
+    "twitter": "alexxubyte",
+    "github": "alex-xu-system",
+    "linkedin": "alexxubyte",
+    "youtube": "@ByteByteGo",
+    "website": "https://bytebytego.com"
+  },
+  "content": {
+    "blog": "https://blog.bytebytego.com",
+    "newsletter": "https://blog.bytebytego.com",
+    "courses": "https://bytebytego.com",
+    "speaking": true
+  },
+  "meta": {
+    "company": "ByteByteGo",
+    "location": "San Francisco, CA",
+    "verified": true,
+    "added_date": "2025-11-15"
+  }
+}
