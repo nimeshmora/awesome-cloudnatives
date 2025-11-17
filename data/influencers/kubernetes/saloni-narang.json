@@ -1,0 +1,27 @@
+{
+  "id": "saloni-narang",
+  "name": "Saloni Narang",
+  "tagline": "Docker Captain, CNCF Ambassador, and co-founder of KubeSimplify simplifying cloud-native",
+  "bio": "Saloni Narang is a Docker Captain, CNCF Ambassador, and Co-founder of KubeSimplify. She simplifies complex cloud-native and Kubernetes concepts through videos, blogs, livestreams, and meetups. A sought-after speaker at KubeCon EU & NA, she has organized workshops across India and creates deep-dive content for Kubernetes, DevOps, and AI.",
+  "avatar": "https://ui-avatars.com/api/?name=Saloni+Narang&size=200&background=667eea&color=fff&bold=true",
+  "expertise": {
+    "primary": ["Kubernetes", "DevOps", "Platform Engineering", "Cloud Native"],
+    "secondary": ["Docker", "GitOps", "WebAssembly", "Developer Relations"]
+  },
+  "social": {
+    "linkedin": "saloninarang",
+    "twitter": "SaloniNarang18",
+    "website": "https://blog.kubesimplify.com"
+  },
+  "content": {
+    "blog": "https://blog.kubesimplify.com",
+    "speaking": true,
+    "workshops": true
+  },
+  "meta": {
+    "company": "KubeSimplify",
+    "location": "India",
+    "verified": true,
+    "added_date": "2025-11-17"
+  }
+}
