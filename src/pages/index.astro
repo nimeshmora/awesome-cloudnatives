@@ -68,9 +68,8 @@ const uniqueExpertise = new Set(influencers.flatMap(i => i.expertise.primary)).s
     <!-- Influencers Grid -->
     <div class="influencers-grid" id="influencers-grid">
       {influencers.map((influencer) => (
-        <a href={`${import.meta.env.BASE_URL}influencers/${influencer.id}/`} class="card-link">
-          <div class="card" data-expertise={JSON.stringify(influencer.expertise.primary)}>
-            <div class="card-header">
+        <div class="card" data-expertise={JSON.stringify(influencer.expertise.primary)}>
+          <div class="card-header">
             {influencer.avatar && (
               <img src={influencer.avatar} alt={influencer.name} class="avatar" loading="lazy" />
             )}
@@ -110,30 +109,30 @@ const uniqueExpertise = new Set(influencers.flatMap(i => i.expertise.primary)).s
             )}
           </div>
 
-          <div class="card-actions" onclick="event.preventDefault(); event.stopPropagation();">
+          <div class="card-actions">
             {/* Primary CTA based on available content */}
             {influencer.content?.courses ? (
-              <a href={influencer.content.courses} target="_blank" rel="noopener" class="cta-button" onclick="event.stopPropagation();">
+              <a href={influencer.content.courses} target="_blank" rel="noopener" class="cta-button">
                 📚 View Courses
               </a>
             ) : influencer.content?.youtube ? (
-              <a href={`https://youtube.com/${influencer.social.youtube}`} target="_blank" rel="noopener" class="cta-button" onclick="event.stopPropagation();">
+              <a href={`https://youtube.com/${influencer.social.youtube}`} target="_blank" rel="noopener" class="cta-button">
                 ▶️ Watch Videos
               </a>
             ) : influencer.content?.blog ? (
-              <a href={influencer.content.blog} target="_blank" rel="noopener" class="cta-button" onclick="event.stopPropagation();">
+              <a href={influencer.content.blog} target="_blank" rel="noopener" class="cta-button">
                 📝 Read Blog
               </a>
             ) : influencer.content?.newsletter ? (
-              <a href={influencer.content.newsletter} target="_blank" rel="noopener" class="cta-button" onclick="event.stopPropagation();">
+              <a href={influencer.content.newsletter} target="_blank" rel="noopener" class="cta-button">
                 📧 Subscribe
               </a>
             ) : influencer.social.website ? (
-              <a href={influencer.social.website} target="_blank" rel="noopener" class="cta-button" onclick="event.stopPropagation();">
+              <a href={influencer.social.website} target="_blank" rel="noopener" class="cta-button">
                 🌐 Visit Website
               </a>
             ) : influencer.social.github ? (
-              <a href={`https://github.com/${influencer.social.github}`} target="_blank" rel="noopener" class="cta-button" onclick="event.stopPropagation();">
+              <a href={`https://github.com/${influencer.social.github}`} target="_blank" rel="noopener" class="cta-button">
                 👨‍💻 Follow on GitHub
               </a>
             ) : null}
@@ -144,13 +143,12 @@ const uniqueExpertise = new Set(influencers.flatMap(i => i.expertise.primary)).s
               data-influencer-id={influencer.id}
               data-influencer-name={influencer.name}
               title="Share this profile"
-              onclick={`event.stopPropagation(); shareInfluencer('${influencer.id}', '${influencer.name.replace(/'/g, "\\'")}')`}
+              onclick={`shareInfluencer('${influencer.id}', '${influencer.name.replace(/'/g, "\\'")}')`}
             >
               📤 Share
             </button>
           </div>
         </div>
-        </a>
       ))}
     </div>
   </div>
@@ -282,18 +280,6 @@ const uniqueExpertise = new Set(influencers.flatMap(i => i.expertise.primary)).s
       --pagefind-ui-background: var(--color-bg);
       --pagefind-ui-border: var(--color-border);
       --pagefind-ui-tag: var(--color-accent);
-    }
-
-    /* Clickable Card Link */
-    .card-link {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-
-    .card-link:hover .card {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
     }
 
     .cta-btn {
