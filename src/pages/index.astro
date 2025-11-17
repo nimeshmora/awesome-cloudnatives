@@ -70,9 +70,7 @@ const uniqueExpertise = new Set(influencers.flatMap(i => i.expertise.primary)).s
               <img src={influencer.avatar} alt={influencer.name} class="avatar" loading="lazy" />
             )}
             <div class="card-title">
-              <h3>
-                <a href={`/influencers/${influencer.id}/`}>{influencer.name}</a>
-              </h3>
+              <h3>{influencer.name}</h3>
             </div>
           </div>
 
