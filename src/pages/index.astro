@@ -154,17 +154,22 @@ const uniqueExpertise = new Set(influencers.flatMap(i => i.expertise.primary)).s
   </div>
 
   <!-- Pagefind UI -->
-  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-  <script is:inline src="/pagefind/pagefind-ui.js"></script>
-  <script is:inline>
+  <link href={`${import.meta.env.BASE_URL}pagefind/pagefind-ui.css`} rel="stylesheet">
+  <script is:inline src={`${import.meta.env.BASE_URL}pagefind/pagefind-ui.js`} define:vars={{ base: import.meta.env.BASE_URL }}></script>
+  <script is:inline define:vars={{ base: import.meta.env.BASE_URL }}>
     // Initialize Pagefind search
-    if (typeof PagefindUI !== 'undefined') {
-      new PagefindUI({
-        element: "#search",
-        showSubResults: true,
-        showImages: false
-      });
-    }
+    window.addEventListener('DOMContentLoaded', (event) => {
+      if (typeof PagefindUI !== 'undefined') {
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          baseUrl: base
+        });
+      } else {
+        console.error('PagefindUI is not loaded');
+      }
+    });
 
     // Filter functionality
     const filterBtns = document.querySelectorAll('.filter-btn');
