@@ -1,0 +1,31 @@
+{
+    "id": "marcel-dempers",
+    "name": "Marcel Dempers",
+    "tagline": "Solutions Architect | DevOps Advocate | YouTuber",
+    "bio": "Solutions Architect passionate about platform engineering, distributed systems, microservices, containers, and cloud-native technologies. DevOps evangelist dedicated to promoting automation, open-source tools, and practices that empower teams to build and deliver autonomously.",
+    "expertise": {
+        "primary": [
+            "Kubernetes",
+            "DevOps"
+        ],
+        "secondary": [
+            "CI/CD",
+            "Cloud"
+        ]
+    },
+    "social": {
+        "twitter": "marceldempers",
+        "github": "marcel-dempers",
+        "linkedin": "marceldempers",
+        "youtube": "MarcelDempers"
+    },
+    "meta": {
+        "location": "Melbourne, Australia",
+        "languages": [
+            "English"
+        ],
+        "company": "Webjet.com.au",
+        "verified": true,
+        "added_date": "2025-11-18"
+    }
+}
