@@ -1,0 +1,30 @@
+{
+  "id": "julia-furst-morgado",
+  "name": "Julia Furst Morgado",
+  "tagline": "Principal Developer Relations Engineer at Dash0, CNCF Ambassador, and AWS Container Hero specializing in OpenTelemetry and observability",
+  "bio": "Julia Furst Morgado is a Principal Developer Relations Engineer at Dash0, focusing on OpenTelemetry and observability. A CNCF Ambassador, AWS Container Hero, and Docker Captain, she translates complex cloud-native concepts into actionable practices.",
+  "avatar": "https://github.com/juliafmorgado.png",
+  "expertise": {
+    "primary": ["Observability", "Platform Engineering", "Kubernetes", "DevOps"],
+    "secondary": ["OpenTelemetry", "Containers", "Cloud-Native"]
+  },
+  "social": {
+    "twitter": "juliafmorgado",
+    "github": "juliafmorgado",
+    "linkedin": "juliafmorgado",
+    "youtube": "@JuliaFMorgado",
+    "website": "https://www.juliafmorgado.com"
+  },
+  "content": {
+    "blog": "https://www.juliafmorgado.com",
+    "speaking": true,
+    "workshops": true
+  },
+  "meta": {
+    "location": "New York, NY, United States",
+    "languages": ["English", "Portuguese", "French", "Spanish"],
+    "company": "Dash0",
+    "verified": true,
+    "added_date": "2025-11-20"
+  }
+}

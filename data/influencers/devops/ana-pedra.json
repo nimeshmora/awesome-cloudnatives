@@ -1,0 +1,27 @@
+{
+  "id": "ana-pedra",
+  "name": "Ana Pedra",
+  "tagline": "Cloud DevSecOps Engineer, Golden Kubestronaut, and multi-cloud expert with 100+ cloud certifications",
+  "bio": "Ana Pedra is a Cloud DevSecOps Engineer at Spitch and Switzerland's first Golden Kubestronaut. With extensive certifications across AWS, Azure, and GCP, she specializes in cloud architecture, Kubernetes, and DevSecOps practices.",
+  "avatar": "https://github.com/redjules.png",
+  "expertise": {
+    "primary": ["DevOps", "Kubernetes", "DevSecOps"],
+    "secondary": ["AWS", "Azure", "GCP", "Terraform", "Ansible"]
+  },
+  "social": {
+    "github": "redjules",
+    "linkedin": "anapedra",
+    "website": "https://anapedra.tech"
+  },
+  "content": {
+    "blog": "https://anapedra.tech",
+    "workshops": true
+  },
+  "meta": {
+    "location": "Zürich, Switzerland",
+    "languages": ["English", "Spanish", "French", "Catalan", "German"],
+    "company": "Spitch",
+    "verified": true,
+    "added_date": "2025-11-20"
+  }
+}
